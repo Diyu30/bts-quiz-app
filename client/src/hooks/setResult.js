@@ -23,7 +23,7 @@ export const usePublishResult = (resultData) => {
     const [published, setPublished] = useState(false);
 
     useEffect(() => {
-        console.log("usePublishResult triggered:", resultData);
+        console.log("usePublishResult triggered:", resultData); // Debugging
 
         if (!resultData?.result?.length || !resultData?.username) {
             console.error("Couldn't get Result");
@@ -46,7 +46,7 @@ export const usePublishResult = (resultData) => {
         };
 
         publish();
-    }, [published, resultData]); // Add resultData as a dependency to trigger on change
+    }, []); // ✅ Empty dependency array ensures it runs only once
 };
 
 

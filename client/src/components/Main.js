@@ -24,8 +24,8 @@ export default function Main() {
     <div className='container'>
         <h1 className='title text-light'>BTS Quiz Application</h1>
 
-        <ol>
-            <li>Welcome, ARMY! Get ready for 10 fun BTS questions. 💜</li>
+        <ol className='instruction-list'>
+            <li>Welcome, ARMY! Get ready for 15 fun BTS questions. 💜</li>
             <li>If you’re a true ARMY, you’ll ace this quiz! 💜 Each correct answer earns you 10 points. 🎶</li>
             <li>Pick the correct option from three choices!</li>
             <li>You can review and change your answers before finishing the quiz.</li>

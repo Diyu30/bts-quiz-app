@@ -97,8 +97,8 @@ export default function Result() {
             </div>
         )}
 
-        {/* Show incorrect answers */}
-        {result.length > 0 && (
+        {/* Show incorrect answers only if the user fails */}
+        {!flag && result.length > 0 && (
             <div className="incorrect-answers">
                 <h2>❌ Incorrect Answers</h2>
                 {queue.map((question, index) => {

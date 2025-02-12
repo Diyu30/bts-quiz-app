@@ -53,6 +53,8 @@
     outline: none;
     transition: all 0.3s ease-in-out;
     font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 10px;
 }
 
 #form .userid:focus {
@@ -61,8 +63,24 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-ol {
-    margin-top: 45px;
+.instruction-list {
+    margin-top: 57px;
+}
+
+.instruction-list li {
+    list-style: none;
+    position: relative;
+    padding-left: 32px; /* Space for the arrow */
+    padding-top: 7px;
+}
+
+.instruction-list li::before {
+    content: "➤"; /* Arrow icon */
+    position: absolute;
+    left: 0;
+    color: #9328c4; /* Purple color */
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #root {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Great+Vibes&display=swap');
 
 :root{
   --primary-color: #0DFF92;
@@ -12,7 +12,7 @@ body, html{
 }
 
 * > *{
-    font-family: 'Poppins', sans-serif;
+  font-family: 'circular';
 }
 
 .container{
@@ -30,10 +30,11 @@ body, html{
     border: 5px solid #8408bd;
     padding: .3em .2em;
     border-radius: 4px;
+    font-family: 'Dancing Script', 'Pacifico', 'Great Vibes', cursive; /* Stylish cursive-like fonts */
 }
 
 .text-light {
-	color: var(--light-color)
+	color: var(--light-color);
 }
 
 .container ul{
@@ -115,7 +116,7 @@ ul li label{
   display: block;
   position: relative;
   font-weight: 300;
-  font-size: 1.35em;
+  font-size: 21px;
   padding: 22px 25px 25px 80px;
   margin: 10px auto;
   height: 30px;
