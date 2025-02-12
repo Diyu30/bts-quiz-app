@@ -48,6 +48,11 @@ app.get('/', (req, res) => {
 //     console.log("Invalid Database Connection");
 // })
 
+connect().then(() => {
+    console.log("Database connected successfully");
+}).catch(error => {
+    console.log("Invalid Database Connection:", error);
+});
 
 /** Export the app for Vercel */
 export default app;
