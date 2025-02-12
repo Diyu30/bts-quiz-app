@@ -48,7 +48,7 @@ export default function Result() {
 
   return (
     <div className='container'>
-        <h1 className='title text-light'>Quiz Application</h1>
+        <h1 className='title text-light'>BTS Quiz Application</h1>
 
         <div className='result flex-center'>
             <div className='flex'>
@@ -94,6 +94,28 @@ export default function Result() {
                     <p>"Yeah, you know it! BTS & ARMY Forever! 💜"</p>
                     <button className="popup-btn" onClick={() => setShowPopup(false)}>💜 Borahae! 💜</button>
                 </div>
+            </div>
+        )}
+
+        {/* Show incorrect answers */}
+        {result.length > 0 && (
+            <div className="incorrect-answers">
+                <h2>❌ Incorrect Answers</h2>
+                {queue.map((question, index) => {
+                    const userAnswerIndex = result[index]; // User's selected answer index
+                    const correctAnswerIndex = answers[index]; // Correct answer index
+
+                    if (userAnswerIndex !== correctAnswerIndex) {
+                        return (
+                            <div key={index} className="wrong-answer">
+                                <p><strong>Q{index + 1}: {question.question}</strong></p>
+                                <p>Your Answer: <span style={{ color: '#d70101' }}>{question.options[userAnswerIndex] || "No Answer"}</span></p>
+                                <p>Correct Answer: <span style={{ color: 'green' }}>{question.options[correctAnswerIndex]}</span></p>
+                            </div>
+                        );
+                    }
+                    return null;
+                })}
             </div>
         )}
 

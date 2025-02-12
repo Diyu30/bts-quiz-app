@@ -30,7 +30,13 @@ export default function ResultTable() {
                             <td>{v?.username || ''}</td>
                             <td>{v?.attempts || 0}</td>
                             <td>{v?.points || 0}</td>
-                            <td>{v?.achived || ""}</td>
+                            <td
+                                    style={{
+                                        color: v?.achived === 'Passed' ? 'green' : (v?.achived === 'Failed' ? 'maroon' : 'inherit')
+                                    }}
+                                >
+                                    {v?.achived || "Not Available"}
+                                </td>   
                         </tr>
                     ))
                 }

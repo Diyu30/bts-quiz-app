@@ -12,7 +12,7 @@ router.route('/questions')
         .delete(controller.dropQuestions) /** DELETE Request */
 
 router.route('/result')
-        .get(controller.getResult)
+        .get(controller.getResults)
         .post(controller.storeResult)
         .delete(controller.dropResult)
 

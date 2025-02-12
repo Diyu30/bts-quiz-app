@@ -26,29 +26,67 @@
     color: #2aff95;
 }
 
+
 table {
     width: 100%;
+    margin-left: -20px;
+    border-collapse: collapse;
+    background: #dedede;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .table-header {
-    color: #cecece;
+    background: linear-gradient(135deg, #5648af, #6c52a0);
+    color: #ffffff;
+    text-align: left;
     font-size: 1.1em;
-    text-align: center;
-    background: #212121;
-    padding: 18px 0;
+    font-weight: bold;
 }
 
-.table-body {
-    font-size: 1.1em;
-    text-align: center;
-    /* color: #cecece; */
-    background: #d8d8d8;
-    padding: 18px 0;
+.table-header tr {
+    height: 50px;
 }
 
-.table-header > tr > td{
-    border: 1px solid #faff5a;   
+.table-body tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background 0.3s ease-in-out;
 }
+
+.table-body tr:hover {
+    background: #f4f4f4;
+}
+
+.table-row td {
+    padding: 12px 15px;
+}
+
+.table-body td {
+    padding: 12px 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.table-body tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    text-align: center;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+    }
+
+    .table-row td, .table-body td {
+        padding: 10px;
+    }
+}
+
 
 /* Blur and Darken Background when Pop-up is Active */
 .popup-active {
@@ -110,4 +148,30 @@ table {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.incorrect-answers {
+    margin-top: 20px;
+    padding: 15px;
+    background: #d8d8d8;
+    border-radius: 10px;
+}
+
+.wrong-answer {
+    border-bottom: 1px solid #ff8080;
+    padding: 10px 0;
+}
+
+.wrong-answer p {
+    margin: 5px 0;
+}
+
+.no-data {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6a5acd;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
 }

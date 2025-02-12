@@ -33,15 +33,30 @@ export async function dropQuestions(req, res){
    }
 }
 
-/** get all result */
-export async function getResult(req, res){
+/** Get all results or a specific result for the logged-in user */
+export async function getResults(req, res) {
     try {
+        const { username } = req.query; // Assuming you pass userId as a query parameter
+
+        if (username) {
+            // Fetch the result for the specific user by their userId (or username)
+            const result = await Results.findOne({ username });
+
+            if (!result) {
+                return res.status(404).json({ msg: "No result found for this user" });
+            }
+
+            return res.json(result);
+        }
+
+        // Fetch all results if no userId is provided
         const r = await Results.find();
-        res.json(r)
+        res.json(r);
     } catch (error) {
-        res.json({ error })
+        res.status(500).json({ error: error.message });
     }
 }
+
 
 /** post all result */
 export async function storeResult(req, res) {
