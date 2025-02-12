@@ -37,7 +37,7 @@ export const usePublishResult = (resultData) => {
 
         const publish = async () => {
             try {
-                const response = await postServerData(`http://localhost:5000/api/result`, resultData);
+                const response = await postServerData(`https://server-i2o4dzic1-diyu3012s-projects.vercel.app/api/result`, resultData);
                 console.log("Result published successfully:", response);
                 setPublished(true);
             } catch (error) {

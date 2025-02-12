@@ -16,7 +16,7 @@ export const useFetchQestion = () => {
         /** async function fetch backend data */
         (async () => {
             try {
-                const [{ questions, answers }] = await getServerData(`http://localhost:5000/api/questions`, (data) => data)
+                const [{ questions, answers }] = await getServerData(`https://server-i2o4dzic1-diyu3012s-projects.vercel.app/api/questions`, (data) => data)
                 
                 if(questions.length > 0){
                     setGetData(prev => ({...prev, isLoading : false}));
