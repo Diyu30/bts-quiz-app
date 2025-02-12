@@ -35,26 +35,16 @@ app.get('/', (req, res) => {
 })
 
 
-// /** start server only when we have valid connection */
-// connect().then(() => {
-//     try {
-//         app.listen(port, () => {
-//             console.log(`Server connected to http://localhost:${port}`)
-//         })
-//     } catch (error) {
-//         console.log("Cannot connect to the server");
-//     }
-// }).catch(error => {
-//     console.log("Invalid Database Connection");
-// })
-
+/** start server only when we have valid connection */
 connect().then(() => {
-    console.log("Database connected successfully");
+    try {
+        app.listen(port, () => {
+            console.log(`Server connected to http://localhost:${port}`)
+        })
+    } catch (error) {
+        console.log("Cannot connect to the server");
+    }
 }).catch(error => {
-    console.log("Invalid Database Connection:", error);
-});
-
-/** Export the app for Vercel */
-export default app;
-
+    console.log("Invalid Database Connection");
+})
 

@@ -6,7 +6,7 @@ export default function ResultTable() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        getServerData(`https://server-bxhx024p8-diyu3012s-projects.vercel.app/api/result`, (res) => {
+        getServerData(`http://localhost:5000/api/result`, (res) => {
             setData(res)
         })
     })
