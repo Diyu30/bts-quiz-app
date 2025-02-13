@@ -1,12 +1,29 @@
 
 
-.flex-center{
+.flex-center {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     flex-direction: column;
-    border: 1px solid #cecece;
     padding: 3em 4em;
     gap: 1em;
+    border-radius: 14px;
+    background: linear-gradient(to right, #4c2874, #62398e);
+    position: relative;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+/* Inner White Background */
+.flex-center::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: white; /* Set the actual background color inside */
+    border-radius: 31px;
+    z-index: -1;
 }
 
 .container .flex{
@@ -45,9 +62,9 @@ table {
     font-weight: bold;
 }
 
-.table-header tr {
+/* .table-header tr {
     height: 50px;
-}
+} */
 
 .table-body tr {
     border-bottom: 1px solid #dddddd;
@@ -164,6 +181,7 @@ td {
 
 .wrong-answer p {
     margin: 5px 0;
+    font-weight: 500;
 }
 
 .no-data {
@@ -174,4 +192,37 @@ td {
     padding: 20px;
     background: #f4f4f4;
     border-radius: 8px;
+}
+
+strong {
+    color:#3a1d7a;
+}
+
+.popup-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #d2ccef;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    color: #7900ff;
+}
+
+.popup-content p {
+    font-size: 18px;
+    color: #333333;
+    font-weight: 500;
 }

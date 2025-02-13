@@ -67,6 +67,11 @@ export async function storeResult(req, res) {
             throw new Error("Data Not Provided...!");
         }
 
+        // 🔴 Prevent storing results if the user has not attempted any questions
+        if (attempts === 0) {
+            return res.status(400).json({ msg: "No attempts made. Result not saved." });
+        }
+
         // 🔍 Check if user result already exists
         const existingResult = await Results.findOne({ username });
 

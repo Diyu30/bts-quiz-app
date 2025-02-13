@@ -22,6 +22,14 @@ export default function Main() {
 
   return (
     <div className='container'>
+
+        <div className="logo-container">
+            <img className='quiz-logo' src="https://i.postimg.cc/KjzkFbH6/logo2-removebg-preview.png" alt="Quiz Logo" />
+            {/* <img className='heart-icon' src="https://i.postimg.cc/3Ncyx6Md/heart-removebg-preview.png" alt="Heart Icon" />
+            <img className='army-logo' src="https://i.postimg.cc/Tw2hqGfK/army-removebg-preview.png" alt="Army Logo" />
+            <img className='army-girl' src="https://i.postimg.cc/s2nCqGt4/girl-removebg-preview.png" alt="Army Girl" /> */}
+        </div>
+
         <h1 className='title text-light'>BTS Quiz Application</h1>
 
         <ol className='instruction-list'>

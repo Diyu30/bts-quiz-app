@@ -1,5 +1,5 @@
 .container ol li{
-    font-size: 1.4em;
+    font-size: 23px;
     color: #cecece;
 }
 
@@ -78,11 +78,43 @@
     content: "➤"; /* Arrow icon */
     position: absolute;
     left: 0;
-    color: #9328c4; /* Purple color */
+    color: #6e04c3; /* Purple color */
     font-size: 18px;
     font-weight: bold;
 }
 
 #root {
     overflow: hidden;
+}
+
+.quiz-logo {
+    width: 160px;  /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    top: -32px;
+    left: -49%;
+}
+
+.heart-icon {
+    width: 130px;  /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    top: -34px;
+    right: -51%;
+}
+
+.army-logo {
+    width: 172px;  /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    bottom: -74px;
+    right: -52%;
+}
+
+.army-girl {
+    width: 172px;  /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    bottom: -74px;
+    left: -52%;
 }
